@@ -1,3 +1,1 @@
-# ion_news
-# ion_news
-# ion_news
+App de noticias con ionic
