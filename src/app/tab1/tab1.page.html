@@ -1,17 +1,24 @@
+<ion-content [fullscreen]="true">
+
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
+    <ion-title class="header">
+      Welcome back, {{userName}}!
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>You're currently on version 0.1.2!</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <p class="patchNotes">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias fuga voluptatem quisquam nesciunt autem id nobis enim ullam numquam unde tempora nisi doloribus ipsam, aspernatur natus iure, temporibus beatae pariatur!</p>
+
+    <ion-button size="small" >See full chagelog</ion-button>
+  </ion-card-content>
+</ion-card>
+
 </ion-content>

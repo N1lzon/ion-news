@@ -1,47 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
+    <ion-title class="header">
       News
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card (click) = go()>
-    <img alt="Silhouette of mountains" src="https://i.kinja-img.com/image/upload/c_fit,q_60,w_1600/9cf21c9511f2370f1f68183d8979a9f1.jpg" />
-    <ion-card-header>
-      <ion-card-title>Everything We Learned About The Ghost Of Tsushima Sequel</ion-card-title>
-    </ion-card-header>
+    
+  @for (item of noticias; track item) {
+    <ion-card (click)="irNoticia()">
+      <img alt="Silhouette of mountains" src="{{item.imagen}}" />
+      <ion-card-header>
+        <ion-card-title>{{item.titulo}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content id="texto">{{item.desc}}</ion-card-content>
+    </ion-card>
+  }
   
-    <ion-card-content>
-      After four years, Sucker Punch Productions announced Ghost of Yōtei, the sequel to its 2020 samurai open-world game Ghost of Tsushima. The PlayStation 5 exclusive closed out the September State of Play with a three-minute trailer showcasing its gorgeous open world and new protagonist Atsu.
-    </ion-card-content>
-  </ion-card>
-
-
-  <ion-card>
-    <img alt="Silhouette of mountains" src="https://i.kinja-img.com/image/upload/c_fit,q_60,w_1315/ebce3791c117aaa79a72d68cf22f1062.jpg" />
-    <ion-card-header>
-      <ion-card-title>An Inside Peek At Indiana Jones' Gameplay Looks Whip-Crackingly, Fist-Punchingly Fun</ion-card-title>
-    </ion-card-header>
   
-    <ion-card-content>
-      The non-cutscene footage we've finally seen reveals a far more nuanced and engaging prospect
-    </ion-card-content>
-  </ion-card>
-
-
-      
-  <ion-card>
-    <img alt="Silhouette of mountains" src="https://i.kinja-img.com/image/upload/c_fit,pg_1,q_60,w_1465/a7ce6d1ff11179b7f7ed785b2ebee539.jpg" />
-    <ion-card-header>
-      <ion-card-title>Seven Hours With Dragon Age: The Veilguard: Has BioWare Learned The Right Lessons?</ion-card-title>
-    </ion-card-header>
-  
-    <ion-card-content>
-      The decade since Inquisition has taught BioWare a lot about its past and future
-    </ion-card-content>
-  </ion-card>
 
   
 </ion-content>

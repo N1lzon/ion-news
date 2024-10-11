@@ -5,6 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonTabButton, IonButton, I
 import { addIcons } from 'ionicons';
 import { chevronBackOutline, heart, arrowBackOutline } from 'ionicons/icons';
 import { Router } from '@angular/router';
+import { NoticiasService } from 'src/app/services/noticias.service';
 
 @Component({
   selector: 'app-noticia1',
@@ -13,15 +14,26 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [IonCol, IonRow, IonGrid, IonIcon, IonButton, IonTabButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
-export class Noticia1Page{
+export class Noticia1Page implements OnInit{
 
 
-  constructor(private router: Router) { 
+  constructor(private router: Router, private noticiaService: NoticiasService) { 
     addIcons({arrowBackOutline,heart,});
   }
 
   goBack() {
     this.router.navigate(['tabs/tab2']);
+  }
+
+  noticias: any[] = [];
+
+  ngOnInit(){
+    this.cargarNoticia();
+  }
+
+  cargarNoticia() {
+    this.noticias = this.noticiaService.getNoticia();
+    console.log("x")
   }
 
 }
