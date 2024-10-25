@@ -1,24 +1,66 @@
 <ion-content [fullscreen]="true">
 
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title class="header">
-      Welcome back, {{userName}}!
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="row">
+  <ion-searchbar placeholder="Tap to search"></ion-searchbar>
+</div>
+
+
+<ion-grid>
+  <ion-row class="themes"> 
+    <ion-col>
+      <div class="iconBg">
+        <ion-icon name="cash-outline" class="themeIcon"></ion-icon>
+      </div>
+      <h3 class="themeTitle">Finance</h3>
+    </ion-col>
+
+    <ion-col>
+      <div class="iconBg">
+        <ion-icon name="american-football-outline" class="themeIcon"></ion-icon>
+      </div>
+      <h3 class="themeTitle">Sports</h3>
+    </ion-col>
+
+    <ion-col>
+      <div class="iconBg">
+        <ion-icon name="cloudy-outline" class="themeIcon"></ion-icon>
+      </div>
+      <h3 class="themeTitle">Weather</h3>
+    </ion-col>
+
+    <ion-col>
+      <div class="iconBg">
+        <ion-icon name="game-controller-outline" class="themeIcon"></ion-icon>
+      </div>
+      <h3 class="themeTitle">Games</h3>
+    </ion-col>
+  </ion-row> 
+</ion-grid>
 
 
 <ion-card>
   <ion-card-header>
-    <ion-card-title>You're currently on version 0.1.2!</ion-card-title>
+    <ion-card-title>Current Weather</ion-card-title>
   </ion-card-header>
-
+  
   <ion-card-content>
-    <p class="patchNotes">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias fuga voluptatem quisquam nesciunt autem id nobis enim ullam numquam unde tempora nisi doloribus ipsam, aspernatur natus iure, temporibus beatae pariatur!</p>
+    <div>
+      <p style="font-size: 25px;">24 °C <ion-icon name="cloudy-night-outline"></ion-icon></p>
+    </div>
 
-    <ion-button size="small" >See full chagelog</ion-button>
+    Partly cloudy
   </ion-card-content>
 </ion-card>
 
+<h2 class="title2">Maybe you're interested in...</h2>
+  <ion-card>
+    <img alt="Silhouette of mountains" src="https://www.gamespot.com/a/uploads/original/1581/15811374/4382983-silenthill2_20240928115355.jpg" />
+      <ion-card-header>
+        <ion-card-title>Silent Hill 2 Remake Answers A Decades-Old Question: Which Ending Is Canon?</ion-card-title>
+      </ion-card-header>
+    <ion-card-content id="texto">Silent Hill 2 players have been speculating about what's really going on in the game since its release in 2001. Even on its most surface level, it's impossible to say definitively what's happening to protagonist James Sunderland. Is he trapped in a hallucinatory nightmare of grief and guilt? Has he wandered into some kind of supernatural space situated around a small American town, created by cultists and elder gods? Or is he dead and in Hell, paying for his sins?</ion-card-content>
+  </ion-card>
+
 </ion-content>
+
+

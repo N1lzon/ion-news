@@ -7,12 +7,6 @@
     }
 }
 
-.header{
-    font-size: 20px;
-    background-color: rgb(105, 105, 235);
-    align-items: center;
-    padding: 0;
-    font-family:"Roboto", sans-serif;
-    color: white;
-    text-shadow: 1, 1, 1, black;
-}
+ion-content {
+    --background: linear-gradient(#cee0ff, #f4f5f8);
+};

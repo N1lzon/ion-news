@@ -1,12 +1,45 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title class="header">
-      News
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+
+
 
 <ion-content [fullscreen]="true">
+  <div class="row">
+    <ion-searchbar placeholder="Tap to search"></ion-searchbar>
+  </div>
+  
+  
+  <ion-grid>
+    <ion-row class="themes"> 
+      <ion-col>
+        <div class="iconBg">
+          <ion-icon name="cash-outline" class="themeIcon"></ion-icon>
+        </div>
+        <h3 class="themeTitle">Finance</h3>
+      </ion-col>
+  
+      <ion-col>
+        <div class="iconBg">
+          <ion-icon name="american-football-outline" class="themeIcon"></ion-icon>
+        </div>
+        <h3 class="themeTitle">Sports</h3>
+      </ion-col>
+  
+      <ion-col>
+        <div class="iconBg">
+          <ion-icon name="cloudy-outline" class="themeIcon"></ion-icon>
+        </div>
+        <h3 class="themeTitle">Weather</h3>
+      </ion-col>
+  
+      <ion-col>
+        <div class="iconBg">
+          <ion-icon name="game-controller-outline" class="themeIcon"></ion-icon>
+        </div>
+        <h3 class="themeTitle">Games</h3>
+      </ion-col>
+    </ion-row> 
+  </ion-grid>
+
+  <h2 class="title">Lastest news</h2>
     
   @for (item of noticias; track item) {
     <ion-card (click)="irNoticia()">

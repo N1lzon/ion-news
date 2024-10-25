@@ -1,13 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title class="header">
-      User Profile
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
   
+  <div>
+    <h1 style="font-size: 20px; margin-left: 10px;">User profile</h1>
+  </div>
+
+  <ion-card>
+
   <div align="center" class="profile" >
 
     <div class="image">
@@ -15,10 +14,15 @@
         <img alt="Silhouette of a person's head" src="{{picLink}}" />
       </ion-avatar>
 
-      <h1>{{userName}}</h1>
+      <p style="font-size: 20px;"><strong>{{userName}}</strong></p>
+      <p style="font-size: 15px; font-style: italic">{{job}}</p>
+      <p style="font-size: 15px;">{{mail}}</p>
+      <br>
+      <br>
+      <br>
+
     </div>
-
   </div>
-
+</ion-card>
  
 </ion-content>
